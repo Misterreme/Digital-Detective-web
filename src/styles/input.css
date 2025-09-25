@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+    /* Light mode */
+  --color-dd-primary: #1E3A8A;     /* Azul profundo (branding principal) */
+  --color-dd-dark:    #111827;     /* Gris muy oscuro (fondos / header / footer) */
+  --color-dd-accent:  #00F5A0;     /* Verde neón (botones / acento) */
+  --color-dd-bg:      #F9FAFB;     /* Fondo claro (secciones limpias) */
+  --color-dd-surface: #374151;     /* Fondo alternativo (tarjetas / bloques) */
+  --color-dd-text-dark:  #111827;  /* Texto en fondos claros */
+  --color-dd-text-light: #E5E7EB;  /* Texto en fondos oscuros */
+
+  --radius-dd: 12px;
+  --shadow-custom: 0px 0px 4px rgba(17, 24, 39, 0.12);
+  --shadow-button: 0px 0 8px var(--color-dd-primary);
+  --ease-dd: cubic-bezier(.2,.9,.3,1);
+
+  /* Dark Mode */
+  --color-primary-dark: #1a73e8; /* Azul confianza */
+  --color-secondary-dark: #e91e63; /* Rosa acento */
+  --color-accent-dark: #fbbc05; /* Amarillo atención */
+
+  --color-bg-dark: #121212; /* Fondo principal */
+  --color-surface-dark: #1e1e1e; /* Superficie tarjetas/menus */
+  --color-border-dark: #2c2c2c; /* Bordes sutiles */
+  
+  --color-text-dark: #e0e0e0; /* Texto principal */
+  --color-muted-dark: #9e9e9e; /* Texto secundario */
+  --color-heading-dark: #ffffff; /* Titulares */
+}
+
+@theme {
+  --animate-float: float ease-in-out 3s infinite;
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@utility animation-delay-1 {
+  animation-delay: 100ms;
+}
+
+@utility animation-delay-2 {
+  animation-delay: 500ms;
+}
+
+@utility animation-delay-3 {
+  animation-delay: 1000ms;
+}
+
+@utility bullet-green {
+  &::marker {
+    color: green;
+  }
+}
