@@ -6,10 +6,14 @@ const form = document.querySelector("form");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  const nameInput = $('name-input');
+  const emailInput = $('email-input');
+  const messageTextArea = $('textarea-message');
+
   const formData = {
-    name: $("#name-input").value,
-    email: $("#email-input").value,
-    message: $("#textarea-message").value
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageTextArea.value
   };
 
   try {
