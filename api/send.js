@@ -15,12 +15,21 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT, 10),
-      secure: process.env.SMTP_SECURE === "true",
+      secure: process.env.SMTP_SECURE,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
       }
     });
+
+    console.log({
+        SMTP_HOST: process.env.SMTP_HOST,
+        SMTP_PORT: process.env.SMTP_PORT,
+        SMTP_SECURE: process.env.SMTP_SECURE,
+        SMTP_USER: process.env.SMTP_USER,
+        SMTP_RECEIVER: process.env.SMTP_RECEIVER
+    });
+
 
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
