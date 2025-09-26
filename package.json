@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "styles": "npx @tailwindcss/cli -i ./public/styles/input.css -o ./public/styles/output.css --minify",
+    "styles": "npx @tailwindcss/cli -i /styles/input.css -o /styles/output.css --minify",
     "build": "npm run styles"
   },
   "keywords": [],
