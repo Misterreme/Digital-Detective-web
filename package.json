@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "styles": "npx @tailwindcss/cli -i ./public/styles/input.css -o ./public/styles/output.css --minify",
-    "build": "npm run styles"
+    "build:css": "npx @tailwindcss/cli -i ./public/styles/input.css -o ./public/styles/output.css --minify",
+    "build": "npm run build:css"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +13,7 @@
   "type": "module",
   "dependencies": {
     "@supabase/supabase-js": "^2.58.0",
-    "@tailwindcss/cli": "^4.1.13",
-    "nodemailer": "^7.0.6",
-    "tailwindcss": "^4.1.13"
+    "@tailwindcss": "^4.1.13",
+    "nodemailer": "^7.0.6"
   }
 }
