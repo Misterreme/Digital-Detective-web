@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Detective</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gradient-to-br from-dd-primary via-dd-primary via-10% to-dd-accent to-80%">
+    <main class="w-full min-h-[100dvh] h-[100dvh] overflow-hidden">
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="w-full h-full flex items-center justify-center px-60 py-25">
+                <div class="w-full h-full flex flex-col items-center justify-center bg-gray-100 rounded-tl-xl rounded-bl-xl shadow-2xl">
+                    <img src="../assets/page-logo.png" class="w-90 h-90"  alt="Logo">
+                </div>
+                <div class="w-2/3 h-full bg-white rounded-tr-xl rounded-br-xl shadow-2xl">
+                    <form class="flex flex-col p-10 justify-between w-full h-full" id="page-form">
+                        <div class="flex flex-col gap-9">
+                            <div class="flex flex-col gap-2">
+                                <label for="email-input" class="font-semibold text-md">Email</label>
+                                <input class="bg-gray-100 py-2 px-4 rounded-lg text-sm border-3 border-transparent focus:border-dd-primary focus:outline-none" type="email" id="email-input" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+                            <div class="flex flex-col gap-2 relative">
+                                <label for="password-input" class="font-semibold text-md">Password</label>
+                                <input class="bg-gray-100 py-2 px-4 rounded-lg text-sm border-3 border-transparent focus:border-dd-primary focus:outline-none" type="password" id="password-input" placeholder="﹡﹡﹡﹡﹡﹡﹡﹡﹡" required>
+                                <div class="absolute top-[55%] left-[90%] cursor-pointer" id="show-password">
+                                    <svg class="w-6 h-6 fill-dd-dark">
+                                        <use xlink:href="../assets/sprite.svg#icon-eye" id="icon-eye"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="w-full flex justify-between">
+                                <div class="flex gap-2 items-center justify-center">
+                                    <input class="w-4 h-4 border-none cursor-pointer accent-blue-500 align-middle outline-none" type="checkbox" id="forgot-password">
+                                    <label for="forgot-password" class="text-sm font-semibold text-gray-600 mb-1 cursor-pointer">¿Recordar?</label>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <p><a href="#!" class="text-sm font-semibold underline text-gray-600">¿Olvidaste tu contraseña?</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" id="sign-up-button" class="bg-green-400 cursor-pointer hover:scale-105 transition-all active:opacity-80 text-lg font-bold py-2 px-6 rounded-xl text-white mt-20">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script type="module" src="../scripts/auth.js"></script>
+</body>
+</html>
