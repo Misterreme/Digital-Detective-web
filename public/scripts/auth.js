@@ -1,5 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js";
-import { SUPABASE_KEY, SUPABASE_URL } from "../../config.js";
+import { SUPABASE_KEY, SUPABASE_URL } from "/config.js";
 
 const $ = (id) => document.getElementById(id);
 const client = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -14,11 +14,11 @@ const pageForm = $('page-form');
 showPasswordButton.addEventListener('click', (e) => {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        iconEye.setAttribute("xlink:href", "../assets/sprite.svg#icon-eye-slash");
+        iconEye.setAttribute("xlink:href", "/assets/sprite.svg#icon-eye-slash");
 
     } else {
         passwordInput.type = "password";
-        iconEye.setAttribute("xlink:href", "../assets/sprite.svg#icon-eye");
+        iconEye.setAttribute("xlink:href", "/assets/sprite.svg#icon-eye");
     };
 });
 
